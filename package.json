@@ -7,8 +7,7 @@
     "test": "./node_modules/.bin/mocha server/**/*.test.js --reporter spec",
     "test:player": "node_modules/.bin/testem",
     "seed": "node ./bin/seed",
-    "db-init": "pg-init mtg",
-    "postinstall": "npm run db-init"
+    "db-init": "pg-init mtg"
   },
   "dependencies": {
     "axios": "^0.15.2",
@@ -19,10 +18,8 @@
     "commander": "^2.9.0",
     "express": "^4.12.0",
     "fs-misc": "^2.0.0",
-    "itunes-library-stream": "^0.0.0",
     "lodash": "^4.15.0",
     "mime": "^1.3.4",
-    "musicmetadata": "^2.0.2",
     "node-status": "^0.1.7",
     "nodemon": "^1.3.7",
     "pg": "^6.1.0",

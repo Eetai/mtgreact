@@ -3,6 +3,7 @@
 
 var chalk = require('chalk');
 
+console.log("I'm server main")
 // Requires in ./db/index.js -- which returns a promise that represents
 // sequelize syncing its models to the postgreSQL database.
 
@@ -16,15 +17,19 @@ var createApplication = function () {
     server.on('request', app); // Attach the Express application.
 };
 
+createApplication()
+
 var startServer = function () {
 
     var PORT = process.env.PORT || 1337;
 
-    server.listen(PORT, function () {
-        console.log(chalk.blue('Server started on port', chalk.magenta(PORT)));
-    });
+    server.listen(PORT, function (err) {
+        console.log(chalk.blue('Server started on port', chalk.magenta(PORT), err));
+    })
 
 };
+
+startServer()
 
 // startDb
 //     .then(createApplication)
